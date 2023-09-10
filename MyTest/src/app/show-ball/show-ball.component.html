@@ -1,0 +1,43 @@
+<h1 style="text-align: center;">Welcome</h1>
+<div style="text-align: center;">
+<span class="dot" style="background-color: red;"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="dot" style="background-color: green;"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="dot" style="background-color: yellow;"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="dot" style="background-color: orange"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+</div>
+<div class="button">
+<button (click)="showtable(1)">RedBall</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button (click)="showtable(1)">GreenBall</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button (click)="showtable(1)">YellowBall</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button (click)="showtable(1)">OrangeBall</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<br>
+<br>
+<div style="margin-left: 42%; background-color: hotpink; margin-right:42%; text-align: center;" *ngIf="showtabledata==1">
+    BallColor :<br>
+    <input type="text" [(ngModel)]="obj.ballColor"><br><br>
+    Name :<br>
+    <input type="text" [(ngModel)]="obj.name"><br><br>
+    mobile no :<br>
+    <input type="text" [(ngModel)]="obj.mobileNo"><br><br>
+    <button (click)="submit()">submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    </div>
+    <br>
+    <br>
+    <button (click)="show()" style="margin-left: 46%;">ShowData</button>
+<br>
+<br>
+<div style="margin-left: 45%;">
+    <table border="1px solid black">
+        <tr style="border: 1px solid black;">
+            <td>Ball Color</td>
+            <td>Count</td>
+        </tr>
+        <tr *ngFor="let d of this.arr ; let i=index">
+            <td>{{arr[i].ballColor}}</td>
+            <td>{{arr[i].count}}</td>
+        </tr>
+    </table>
+</div>

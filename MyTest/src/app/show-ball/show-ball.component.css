@@ -1,0 +1,12 @@
+.dot{
+    height: 25px;
+    height: 25px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+}
+.button{
+    margin-left: 34%;
+}
